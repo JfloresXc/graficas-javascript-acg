@@ -19,8 +19,6 @@ const getDataExcel = () => {
 	return dataExcel;
 };
 
-console.log(getDataExcel());
-
 // Routes
 app.get("/data", (req, res) => {
 	res.json({ data: getDataExcel() });

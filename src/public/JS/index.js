@@ -92,7 +92,7 @@ const addCanvaPie = ({
 let datos = [];
 
 buttonData.addEventListener("click", () => {
-	fetch("http://localhost:3003/data", {
+	fetch("data", {
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json",
