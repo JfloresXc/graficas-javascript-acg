@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Space+Grotesk&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--height-navbar: 80px;
+	--padding-width: 5em;
+	--colors-dark: #1a1a1a;
+	--colors-light: #fff;
+	--colors-danger: #f86c6b;
+	--colors-primary: #010f1a;
+	--colors-success: #4dbd74;
+	--colors-warning: #ffc107;
+	--colors-accent-1: #0161d2;
+	--colors-accent-2: #e29ba2;
+	--colors-grey-100: #f1f1f1;
+	--colors-grey-200: #dddddd;
+	--colors-grey-300: #c9c9c9;
+	--colors-grey-400: #b5b5b5;
+	--colors-grey-500: #a1a1a1;
+	--colors-grey-600: #888888;
+	--colors-grey-700: #747474;
+	--colors-grey-800: #565656;
+	--colors-grey-900: #383838;
+	--colors-secondary: #fad001;
+	--colors-primary-dark: #000001;
+	--colors-accent-1-dark: #0048b9;
+	--colors-accent-2-dark: #c98289;
+	--colors-primary-light: #15232e;
+	--colors-accent-1-light: #1575e6;
+	--colors-accent-2-light: #f6afb6;
+	--colors-primary-accent: #0b1924;
+	--colors-secondary-dark: #e1b700;
+	--colors-accent-1-accent: #0b6bdc;
+	--colors-accent-2-accent: #eca5ac;
+	--colors-secondary-light: #ffe415;
+	--colors-secondary-accent: #ffda0b;
+}
+
+body {
+	background: var(--colors-grey-100);
+}
+
+main {
+	padding: 2em;
+}
+
+.button {
+	/* Quitar los estilos por defecto de cada boton */
+	border: none;
+	cursor: pointer;
+
+	font-family: "Roboto", sans-serif;
+	font-size: 1.2em;
+	width: 300px;
+	height: 70px;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid var(--colors-success);
+}
+
+.button-data > span {
+	position: relative;
+	z-index: 2;
+	transition: 0.5s ease-in-out all;
+	font-weight: 400;
+}
+
+.button-data::after {
+	content: "";
+	width: 100%;
+	height: 70px;
+	background: var(--colors-success);
+	position: absolute;
+	top: -80px;
+	left: 0;
+	z-index: 1;
+	transition: 0.5s ease-in-out all;
+}
+
+.button-data:hover::after {
+	top: 0px;
+}
+
+.button-data:hover {
+	color: var(--colors-grey-100);
+}
+
+/* GRAFICO */
+.grafico-barras {
+	margin: 6em auto;
+	min-width: 800px;
+	transition: 1s linear all;
+	opacity: 1;
+}
+
+.grafico-barras__show {
+	opacity: 1;
+}
